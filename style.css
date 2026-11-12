@@ -113,7 +113,7 @@ address { font-style: normal; margin-bottom: 1.5rem; }
 .fab { 
   position: fixed; 
   right: 1rem; 
-  bottom: calc (1rem + var(--badge)); 
+  bottom: calc(1rem + var(--badge)); 
   z-index: 30; display: inline-flex; 
   align-items: center; 
   min-height: 3rem; 
