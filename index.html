@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Eat Me | Gaufres, bubble tea et douceurs à Libreville</title>
+    <meta
+      name="description"
+      content="Eat Me, à Akanda (Libreville) : gaufres gourmandes, bubble tea, matchas et plats salés dans un décor chaleureux. Appelez le 076 22 21 95."
+    />
+    <meta name="theme-color" content="#3D1C11" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:site_name" content="Eat Me" />
+    <meta
+      property="og:title"
+      content="Eat Me | Gaufres, bubble tea et douceurs à Libreville"
+    />
+    <meta
+      property="og:description"
+      content="Eat Me, à Akanda (Libreville) : gaufres gourmandes, bubble tea, matchas et plats salés dans un décor chaleureux. Appelez le 076 22 21 95."
+    />
+    <!-- Remplacer par l'adresse complète (https://votre-domaine/...) une fois le domaine connu -->
+    <meta property="og:image" content="og-accueil.jpg" />
+    <link rel="icon" href="favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      document.documentElement.classList.add("js");
+      /* Animation d'entrée : une fois par session, jamais si l'utilisateur réduit les animations */
+      try {
+        if (
+          !sessionStorage.getItem("eatme-intro") &&
+          !matchMedia("(prefers-reduced-motion: reduce)").matches
+        )
+          document.documentElement.classList.add("intro-on");
+      } catch (e) {}
+    </script>
+    <script src="site-config.js"></script>
+    <script src="main.js" defer></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Eat Me",
+        "description": "Gaufres gourmandes, bubble tea, matchas et plats salés à Akanda, Libreville.",
+        "image": "assets/img/accueil-illustration-l.webp",
+        "telephone": "076222195",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Akanda, en face de la cité marocaine",
+          "addressLocality": "Libreville",
+          "addressCountry": "GA"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 0.5217552,
+          "longitude": 9.3817955
+        },
+        "sameAs": ["https://www.tiktok.com/@eatme.lbv"]
+      }
+    </script>
+  </head>
+  <body data-page="accueil">
+    <noscript
+      ><p style="padding: 1rem">
+        <a href="index.html">Accueil</a> ·
+        <a href="recrutement.html">Recrutement</a> ·
+        <a href="evenement.html">Événement</a> · 076 22 21 95
+      </p></noscript
+    >
+
+    <div class="intro" id="intro" role="presentation">
+      <img
+        class="intro-img"
+        src="assets/img/accueil-illustration-l.webp"
+        alt=""
+        width="1200"
+        height="2135"
+      />
+      <p class="intro-txt">Bienvenue à Eat Me</p>
+      <button type="button" class="intro-skip">Passer</button>
+    </div>
+
+    <main id="contenu">
+      <!-- 1. PROMESSE : quoi, pour qui, bénéfice, un seul bouton principal -->
+      <section class="hero" aria-labelledby="titre">
+        <img
+          class="hero-img"
+          src="assets/img/accueil-illustration.webp"
+          srcset="
+            assets/img/accueil-illustration.webp    900w,
+            assets/img/accueil-illustration-l.webp 1200w
+          "
+          sizes="(min-width: 860px) 46vw, 100vw"
+          width="900"
+          height="1601"
+          alt="Deux clientes trinquent avec des boissons Eat Me devant l'enseigne Waffle Eat Me"
+          fetchpriority="high"
+        />
+        <div class="hero-txt wrap">
+          <h1 id="titre">Une table douce et chaleureuse à Libreville</h1>
+          <p>
+            Gaufres gourmandes, bubble tea, matchas et plats salés, servis avec
+            bienveillance à Akanda, en face de la cité marocaine.
+          </p>
+          <p>
+            <a class="btn" data-cta data-tel href="tel:076222195"
+              >Appeler le&nbsp;<span data-num>076 22 21 95</span></a
+            ><a class="lien" href="#carte">Voir la carte</a>
+          </p>
+        </div>
+      </section>
+
+      <!-- 2. OFFRE : nos douceurs (photos du client) -->
+      <section
+        class="sec b2"
+        id="douceurs"
+        style="--de: var(--brun)"
+        aria-labelledby="t-douceurs"
+      >
+        <div class="wrap galerie reveal">
+          <h2 id="t-douceurs">Nos douceurs</h2>
+          <p>
+            Gaufres, crêpes et boissons de la maison. Touchez une photo pour
+            l'agrandir.
+          </p>
+          <div class="rang">
+            <button
+              type="button"
+              class=""
+              data-zoom="assets/img/douceur-1-l.webp"
+              data-alt="Gaufre allongée nappée de glaçage rose et bleu"
+            >
+              <img
+                src="assets/img/douceur-1-s.webp"
+                width="640"
+                height="1139"
+                alt="Gaufre allongée nappée de glaçage rose et bleu"
+                loading="lazy"
+              />
+            </button>
+            <button
+              type="button"
+              class=""
+              data-zoom="assets/img/douceur-2-l.webp"
+              data-alt="Trois boissons en bouteille aux couleurs Eat Me"
+            >
+              <img
+                src="assets/img/douceur-2-s.webp"
+                width="640"
+                height="1139"
+                alt="Trois boissons en bouteille aux couleurs Eat Me"
+                loading="lazy"
+              />
+            </button>
+            <button
+              type="button"
+              class=""
+              data-zoom="assets/img/douceur-3-l.webp"
+              data-alt="Gaufres bleue et rouge, nappées de chocolat et de glaçage"
+            >
+              <img
+                src="assets/img/douceur-3-s.webp"
+                width="640"
+                height="1139"
+                alt="Gaufres bleue et rouge, nappées de chocolat et de glaçage"
+                loading="lazy"
+              />
+            </button>
+            <button
+              type="button"
+              class="large"
+              data-zoom="assets/img/douceur-4-l.webp"
+              data-alt="Gaufres en forme de sabot, bleue et rouge, devant l'enseigne Eat Me"
+            >
+              <img
+                src="assets/img/douceur-4-s.webp"
+                width="960"
+                height="540"
+                alt="Gaufres en forme de sabot, bleue et rouge, devant l'enseigne Eat Me"
+                loading="lazy"
+              />
+            </button>
+            <button
+              type="button"
+              class=""
+              data-zoom="assets/img/douceur-5-l.webp"
+              data-alt="Plateau de douceurs dorées au chocolat"
+            >
+              <img
+                src="assets/img/douceur-5-s.webp"
+                width="640"
+                height="1138"
+                alt="Plateau de douceurs dorées au chocolat"
+                loading="lazy"
+              />
+            </button>
+            <button
+              type="button"
+              class=""
+              data-zoom="assets/img/douceur-6-l.webp"
+              data-alt="Plateau de douceurs au chocolat et aux vermicelles colorés"
+            >
+              <img
+                src="assets/img/douceur-6-s.webp"
+                width="640"
+                height="1138"
+                alt="Plateau de douceurs au chocolat et aux vermicelles colorés"
+                loading="lazy"
+              />
+            </button>
+            <button
+              type="button"
+              class=""
+              data-zoom="assets/img/douceur-7-l.webp"
+              data-alt="Boîte de gaufres nappées de chocolat"
+            >
+              <img
+                src="assets/img/douceur-7-s.webp"
+                width="640"
+                height="1138"
+                alt="Boîte de gaufres nappées de chocolat"
+                loading="lazy"
+              />
+            </button>
+            <button
+              type="button"
+              class=""
+              data-zoom="assets/img/douceur-8-l.webp"
+              data-alt="Gaufre ronde nappée de chocolat dans une assiette orange"
+            >
+              <img
+                src="assets/img/douceur-8-s.webp"
+                width="640"
+                height="852"
+                alt="Gaufre ronde nappée de chocolat dans une assiette orange"
+                loading="lazy"
+              />
+            </button>
+            <button
+              type="button"
+              class=""
+              data-zoom="assets/img/douceur-9-l.webp"
+              data-alt="Trois boissons en bouteille, rouge, jaune et verte"
+            >
+              <img
+                src="assets/img/douceur-9-s.webp"
+                width="640"
+                height="1138"
+                alt="Trois boissons en bouteille, rouge, jaune et verte"
+                loading="lazy"
+              />
+            </button>
+          </div>
+          <div class="fleches" hidden>
+            <button type="button" aria-label="Photos précédentes">←</button>
+            <button type="button" aria-label="Photos suivantes">→</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2 bis. OFFRE : la carte (pages d'origine, sans retranscription des prix) -->
+      <section
+        class="sec b1"
+        id="carte"
+        style="--de: var(--brun2)"
+        aria-labelledby="t-carte"
+      >
+        <div class="wrap reveal">
+          <h2 id="t-carte">La carte</h2>
+          <p>
+            Du salé au sucré, des matchas aux bubble teas. Touchez une page pour
+            l'agrandir. La page Alcools est réservée aux plus de 18 ans.
+          </p>
+          <ul class="pages">
+            <li>
+              <button
+                type="button"
+                data-zoom="assets/img/menu-1-l.webp"
+                data-alt="Carte Eat Me : Menu salé"
+              >
+                <img
+                  src="assets/img/menu-1-s.webp"
+                  width="480"
+                  height="679"
+                  alt=""
+                  loading="lazy"
+                />Menu salé
+              </button>
+            </li>
+            <li>
+              <button
+                type="button"
+                data-zoom="assets/img/menu-2-l.webp"
+                data-alt="Carte Eat Me : Menu sucré"
+              >
+                <img
+                  src="assets/img/menu-2-s.webp"
+                  width="480"
+                  height="679"
+                  alt=""
+                  loading="lazy"
+                />Menu sucré
+              </button>
+            </li>
+            <li>
+              <button
+                type="button"
+                data-zoom="assets/img/menu-3-l.webp"
+                data-alt="Carte Eat Me : Carte adulte"
+              >
+                <img
+                  src="assets/img/menu-3-s.webp"
+                  width="480"
+                  height="679"
+                  alt=""
+                  loading="lazy"
+                />Carte adulte
+              </button>
+            </li>
+            <li>
+              <button
+                type="button"
+                data-zoom="assets/img/menu-4-l.webp"
+                data-alt="Carte Eat Me : Matchas"
+              >
+                <img
+                  src="assets/img/menu-4-s.webp"
+                  width="480"
+                  height="679"
+                  alt=""
+                  loading="lazy"
+                />Matchas
+              </button>
+            </li>
+            <li>
+              <button
+                type="button"
+                data-zoom="assets/img/menu-5-l.webp"
+                data-alt="Carte Eat Me : Bubble tea"
+              >
+                <img
+                  src="assets/img/menu-5-s.webp"
+                  width="480"
+                  height="679"
+                  alt=""
+                  loading="lazy"
+                />Bubble tea
+              </button>
+            </li>
+            <li>
+              <button
+                type="button"
+                data-zoom="assets/img/menu-6-l.webp"
+                data-alt="Carte Eat Me : Boissons"
+              >
+                <img
+                  src="assets/img/menu-6-s.webp"
+                  width="480"
+                  height="679"
+                  alt=""
+                  loading="lazy"
+                />Boissons
+              </button>
+            </li>
+            <li>
+              <button
+                type="button"
+                data-zoom="assets/img/menu-7-l.webp"
+                data-alt="Carte Eat Me : Alcools"
+              >
+                <img
+                  src="assets/img/menu-7-s.webp"
+                  width="480"
+                  height="679"
+                  alt=""
+                  loading="lazy"
+                />Alcools
+              </button>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 3. PREUVES : avis Google réels (captures du client) -->
+      <section
+        class="sec b3"
+        id="avis"
+        style="--de: var(--brun)"
+        aria-labelledby="t-avis"
+      >
+        <div class="wrap reveal">
+          <h2 id="t-avis">Ils en parlent</h2>
+          <div class="note">
+            <strong>5,0</strong>
+            <p>
+              <span aria-hidden="true">★★★★★</span> sur 5, d'après 2 avis Google
+            </p>
+          </div>
+          <div class="avis">
+            <blockquote>
+              <p>
+                Très mignon, la clim donne bien, la musique était super. Les
+                pâtisseries étaient super bonnes, je vous le recommande. Par
+                contre, ils devraient mettre une pancarte pour que l'on puisse
+                bien voir l'endroit, j'ai failli le rater.
+              </p>
+              <footer>
+                Nevralia, avis Google. Cuisine 5, service 5, ambiance 5.
+              </footer>
+            </blockquote>
+            <div>
+              <p>
+                <strong>Elie Ossiba</strong>, avis Google, 5 étoiles.<br />Cuisine
+                5, service 5, ambiance 5. Lieu sans réservation, facile de s'y
+                garer.
+              </p>
+            </div>
+          </div>
+          <p class="petit">
+            Dépense par personne indiquée dans les avis : 6 à 10 k FCFA.
+          </p>
+          <p>
+            <a
+              data-maps
+              target="_blank"
+              rel="noopener"
+              href="https://www.google.com/maps/place/Eat+Me/@0.5221884,9.3814134,17.66z/data=!4m16!1m9!3m8!1s0x107ed70078362251:0x8b55dadd86e2dca2!2sEat+Me!8m2!3d0.5217552!4d9.3817955!9m1!1b1!16s%2Fg%2F11zf6jb1b0!3m5!1s0x107ed70078362251:0x8b55dadd86e2dca2!8m2!3d0.5217552!4d9.3817955!16s%2Fg%2F11zf6jb1b0?entry=ttu&g_ep=EgoyMDI2MTEwOC4wIKXMDSoASAFQAw%3D%3D"
+              >Lire les avis sur Google Maps</a
+            >
+          </p>
+        </div>
+      </section>
+
+      <!-- 4. CONFIANCE + CONTACT : le lieu, l'adresse, l'appel -->
+      <section
+        class="sec b1"
+        id="contact"
+        style="--de: var(--terre)"
+        aria-labelledby="t-contact"
+      >
+        <div class="wrap duo reveal">
+          <div>
+            <h2 id="t-contact">Venir chez nous</h2>
+            <p>
+              Un décor de velours terracotta, de plantes et de tables jaunes.
+            </p>
+            <address data-adresse>
+              Akanda, en face de la cité marocaine<br />Libreville, Gabon
+            </address>
+            <!-- Horaires : [À fournir par le client] (absents des informations reçues, donc non affichés) -->
+            <p>
+              <a class="btn" data-cta data-tel href="tel:076222195"
+                >Appeler le&nbsp;<span data-num>076 22 21 95</span></a
+              >
+            </p>
+            <p>
+              <a
+                data-maps
+                target="_blank"
+                rel="noopener"
+                href="https://www.google.com/maps/place/Eat+Me/@0.5221884,9.3814134,17.66z/data=!4m16!1m9!3m8!1s0x107ed70078362251:0x8b55dadd86e2dca2!2sEat+Me!8m2!3d0.5217552!4d9.3817955!9m1!1b1!16s%2Fg%2F11zf6jb1b0!3m5!1s0x107ed70078362251:0x8b55dadd86e2dca2!8m2!3d0.5217552!4d9.3817955!16s%2Fg%2F11zf6jb1b0?entry=ttu&g_ep=EgoyMDI2MTEwOC4wIKXMDSoASAFQAw%3D%3D"
+                >Itinéraire sur Google Maps</a
+              >
+              ·
+              <a
+                data-tiktok
+                target="_blank"
+                rel="noopener"
+                href="https://www.tiktok.com/@eatme.lbv"
+                >Eat Me sur TikTok</a
+              >
+            </p>
+          </div>
+          <video
+            controls
+            preload="none"
+            playsinline
+            width="540"
+            height="960"
+            poster="assets/img/salle-poster.webp"
+            aria-label="Visite de la salle Eat Me"
+          >
+            <source src="assets/video/salle.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
